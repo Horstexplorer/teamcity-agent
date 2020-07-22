@@ -1,6 +1,8 @@
 FROM jetbrains/teamcity-agent:latest
 USER root
-RUN apt update && apt install wget && \
+RUN  apt update && \
+     apt upgrade -y && \
+     apt install wget && \
      wget -c https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz && \
      tar -xvf openjdk-13.0.2_linux-x64_bin.tar.gz && \
      rm openjdk-13.0.2_linux-x64_bin.tar.gz && \
