@@ -2,7 +2,7 @@ FROM jetbrains/teamcity-agent:latest
 USER root
 RUN  apt update && \
      apt upgrade -y && \
-     apt install wget && \
+     apt install wget zip unzip && \
      wget -c https://download.java.net/java/GA/jdk16/7863447f0ab643c585b9bdebf67c69db/36/GPL/openjdk-16_linux-x64_bin.tar.gz && \
      tar -xvf openjdk-16_linux-x64_bin.tar.gz && \
      rm openjdk-16_linux-x64_bin.tar.gz && \
