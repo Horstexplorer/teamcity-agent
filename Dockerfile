@@ -2,7 +2,7 @@ FROM jetbrains/teamcity-agent:latest
 USER root
 RUN  apt update && \
      apt upgrade -y && \
-     apt install wget && \
+     apt install wget zip unzip && \
      wget -c https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_linux-x64_bin.tar.gz && \
      tar -xvf openjdk-14.0.2_linux-x64_bin.tar.gz && \
      rm openjdk-14.0.2_linux-x64_bin.tar.gz && \
