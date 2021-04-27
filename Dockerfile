@@ -2,7 +2,7 @@ FROM jetbrains/teamcity-agent:latest
 USER root
 RUN  apt update && \
      apt upgrade -y && \
-     apt install wget zip unzip && \
+     apt install -y wget zip unzip && \
      wget -c https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz && \
      tar -xvf openjdk-11.0.2_linux-x64_bin.tar.gz && \
      rm openjdk-11.0.2_linux-x64_bin.tar.gz && \
