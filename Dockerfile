@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-agent:2020.2.4-linux
+FROM jetbrains/teamcity-agent:2020.2.1
 USER root
 RUN  apt update && \
      apt upgrade -y && \
